@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
+    <title>|Smart Trade| </title>
+
+    <style>
+        html,body {
+    margin:0;
+    padding:0;
+}
+        .wrapper{
+            display: grid; grid-template-columns:auto;grid-template-rows:100px auto 100px;background-color: black;
+        }
+        .headerClass{
+            grid-row: 1;
+            
+        }
+        .bodyClass{
+            grid-row: 2;
+        }
+        .footerClass{
+            grid-row: 3;
+        }
+    
+    
+        <!--Head Function-->
+        .pageTitle{
+            color: #C0C0C0;
+        }
+        .navBar{
+            display:grid;
+            grid-template-columns: 100px auto 100px;
+            grid-template-rows: auto;
+            border-bottom: 1px solid green;
+            position: sticky;
+        }
+        .menuBar{
+            grid-column: 1;
+            display: flex;
+        }
+        .menuButton{
+            background-color: #3b2727;
+            color: skyblue;
+        }
+        .menuButton:hover{
+            background-color: gold;
+            color:black;
+            transition: all 1s;
+
+        }
+        .titleBar{
+            grid-column: 2/3;
+            color: whitesmoke;
+        }
+        .otherBar{
+            grid-column: 3;
+        }
+        <!--Body Function-->
+        .tableContainer{
+            width: 80%;
+            color: #D4AF37;
+            border-left: 5px solid #C0C0C0;
+            border-right: 5px solid #C0C0C0;
+        }
+        .tableHead{
+            width: 100%;
+            color:  #D4AF37;
+            border-bottom: 1px solid green;
+            border-spacing: 20px;
+        }
+        .tableRow{
+            width:100%;
+            border-spacing: 20px;
+            text-align: center;
+        }
+        <!--Foot Function-->
+        .footContainer{
+            display:none;
+        }
+        tr:hover{
+            background-color: white;
+            transition: all 0.5s;
+        }
+        td:hover{
+            background-color: silver;
+            transition: all 0.25s;
+        }
+    
+    </style>
+<wrap class="wrapper">
+    <header class="headerClass" >
+       <!--{%block header%}-->
+        <div class="navBar">
+            <div class="menuBar">
+                <button class="menuButton"><img src="menubar.webp" style="width: 100px;"></button>
+            </div>
+        <!--{%block title%}--><div class="titleBar"><center><h1>SmartTrade</h1></center></div><--{%end block%}-->
+        </div>
+        <!--{% endblock%}-->
+    </header>
+    <body class="bodyClass">
+        <div>
+            <!--{% block sidebar}-->
+            <center><table style="width: 80%;color: #D4AF37;border-left: 5px solid #C0C0C0;border-right: 5px solid #C0C0C0;">
+            <tr class="tableHead"> 
+                <th onclick="alert('Sorting');" style="text-decoration: underline;">Ticker</th>
+                <th onclick="alert('Sorting');"style="text-decoration: underline;">Company</th>
+                <th onclick="alert('Sorting');"style="text-decoration: underline;">Price</th>
+                <th onclick="alert('Sorting');"style="text-decoration: underline;">&#x392</th>
+                <th onclick="alert('Sorting');"style="text-decoration: underline;">P:E</th>
+                <th onclick="alert('Sorting');"style="text-decoration: underline;">% &#x394 past 7 days</th>
+                <!--<th>Ticker</th>
+                <th>Ticker</th>
+                <th>Ticker</th>
+                <th>Ticker</th>
+                <th>Ticker</th>-->
+            </tr>
+           <tr class="tableRow" caption="Apple">
+              <td>AAPL</td>
+              <td>Apple Inc</td>
+              <td>$131.96</td>
+              <td>Beta value</td>
+              <td>13.17</td>
+              <td style="color: red;">-3.74%</td>
+            
+            </tr>
+            <tr class="tableRow">
+                <td>TSLA</td>
+                <td>Tesla</td>
+                <td>$793.53</td>
+                <td>Beta value</td>
+                <td>1255.27</td>
+                <td style="color: green;">0.71%</td>
+              
+              </tr>
+            
+            
+            
+            </table>
+        </center>
+        </div>
+    </body>
+
+ <footer style="grid-row: 3;">
+    <div class="footBar">
+
+    </div>
+ </footer>
+</wrap>
